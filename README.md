@@ -22,6 +22,8 @@ docker run hello-world
 
 On Windows install docker desktop.
 
+## Download .jar file with inception 
+Create a folder named `workspace`. Copy the downloaded .jar file with inception and rename it to `Inception.jar`
 
 ## Build docker image from Dockerfile
 ```
