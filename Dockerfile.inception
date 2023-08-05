@@ -1,0 +1,23 @@
+FROM ubuntu:20.04
+
+RUN apt update 
+RUN apt install -y apt-utils 
+RUN apt install -y sudo wget 
+RUN apt install -y libx11-6 libgl1 libglib2.0-0
+
+RUN adduser --disabled-password --uid 1000 --gecos '' ubuntu
+RUN adduser ubuntu sudo 
+RUN echo '%sudo ALL=(ALL) NOPASSWD:ALL' >> /etc/sudoers
+
+USER ubuntu
+WORKDIR /home/ubuntu
+
+RUN sudo apt update 
+RUN sudo apt upgrade
+RUN sudo apt install -y micro 
+
+RUN sudo apt install -y openjdk-17-jdk
+
+EXPOSE 8080/tcp
+
+CMD ["java", "-jar", "inception.jar"]
