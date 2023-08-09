@@ -1,5 +1,5 @@
-FROM ubuntu:20.04
-
+FROM ubuntu:20.04 AS this
+ 
 RUN apt update 
 RUN apt install -y apt-utils 
 RUN apt install -y sudo wget 
@@ -13,11 +13,12 @@ USER ubuntu
 WORKDIR /home/ubuntu
 
 RUN sudo apt update 
-RUN sudo apt upgrade
 RUN sudo apt install -y micro 
 
 RUN sudo apt install -y openjdk-17-jdk
 
+RUN wget https://github.com/inception-project/inception/releases/download/inception-29.0/inception-app-webapp-29.0-standalone.jar
+
 EXPOSE 8080/tcp
 
-CMD ["java", "-jar", "inception.jar"]
+CMD ["java", "-jar", "/home/ubuntu/inception-app-webapp-29.0-standalone.jar"]

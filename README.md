@@ -1,5 +1,15 @@
 # Quick guide
+# If you have docker installed in your system:
+1. build docker image by running:
+```
+docker build -f Dockerfile.inception -t inception_box
+```
+2. run the container from project's directory using docker compose:
+```
+docker-compose up
+```
 
+## More information
 ## Configure system for docker container
 On Ubuntu:
 ```

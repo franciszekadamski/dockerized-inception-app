@@ -7,6 +7,4 @@ services:
       DOCKER_HOST: https://127.0.0.1
     ports: 
       - 80:8080
-    volumes:
-      - ./workspace/:/home/ubuntu/
       
