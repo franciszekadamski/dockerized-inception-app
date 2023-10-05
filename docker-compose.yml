@@ -3,6 +3,8 @@ services:
   inception_box:
     privileged: true
     image: inception_box
+    build:
+      context: "."
     environment:
       DOCKER_HOST: https://127.0.0.1
     ports: 
