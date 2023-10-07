@@ -1,13 +1,27 @@
 # Quick guide
 # If you have docker installed in your system:
-1. build docker image by running:
+1. build and run docker image by running:
 ```
 docker-compose up --build
 ```
-2. run the container from project's directory using docker compose:
+2. if it is already build, run it without `--build` flag:
 ```
 docker-compose up
 ```
+3. press `ctrl + c` to stop the container. 
+4. if you ran the container silently with command:
+```
+docker-compose up -d
+```
+you cannot see the output. Then just type
+```
+docker-compose stop <container-name>
+```
+to stop the container or 
+```
+docker-compose down
+```
+to shut it down and remove it.
 
 ## More information
 ## Configure system for docker container
