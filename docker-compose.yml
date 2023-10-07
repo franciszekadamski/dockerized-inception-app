@@ -7,6 +7,13 @@ services:
       context: "."
     environment:
       DOCKER_HOST: https://127.0.0.1
+    volumes:
+      - ./inception-ws/:/root/.inception/
     ports: 
       - 80:8080
-      
+    command: >
+      sh -c "ngrok http 8080 & \
+             java -jar inception-app-webapp-29.0-standalone.jar"
+
+volumes:
+  inception-ws:      
