@@ -4,10 +4,6 @@
 ```
 docker-compose up --build
 ```
-or
-```
-docker build -f Dockerfile.inception -t inception_box .
-```
 2. run the container from project's directory using docker compose:
 ```
 docker-compose up
@@ -41,7 +37,7 @@ Create a folder named `workspace` in the main folder (`dockerized-inception-app`
 
 ## Build docker image from Dockerfile
 ```
-docker build -f Dockerfile.inception --tag inception_box .
+docker build -f Dockerfile --tag inception_box .
 ```
 
 ## Run the inception contenerized app using docker-compose
