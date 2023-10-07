@@ -23,6 +23,9 @@ docker-compose down
 ```
 to shut it down and remove it.
 
+Running container can be accessed on localhost (`localhost` or `127.0.0.1:80`).
+Moreover, there is a tunnelling to the public internet using ngrok. Take a look at readme.md file.
+
 ## More information
 ## Configure system for docker container
 On Ubuntu:
