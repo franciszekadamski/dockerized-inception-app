@@ -84,6 +84,5 @@ docker stop dockerized-inception-app_inception_box_1
 ```
 in the terminal. 
 
-Users are:
+First login:
 - admin with password admin
-- useruser with password useruser
