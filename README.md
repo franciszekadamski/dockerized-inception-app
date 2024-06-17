@@ -1,3 +1,7 @@
+I am not the author of inception.
+Content of this repository is inteded to ease installation and usage of inception.
+
+Link below redirects to the original repository:
 https://github.com/inception-project/inception
 
 # Quick guide
